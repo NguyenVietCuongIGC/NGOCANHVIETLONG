@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0b10" />
+  <title>Thiệp Cưới | Nguyễn Ngọc Ánh & Đỗ Viết Long</title>
+  <meta name="description" content="Thiệp cưới online — Trân trọng kính mời bạn đến chung vui." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <!-- Top pill nav -->
+  <div class="topbar">
+    <div class="container">
+      <div class="wrap">
+        <div class="brandmark">
+          <div class="dot"></div>
+          <div>
+            <strong id="topNames">Ngọc Ánh & Việt Long</strong><br>
+            <span>Thiệp cưới online</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" id="btnMusic">♫ Nhạc</button>
+          <button class="btn primary" id="btnGift">🎁 Mừng cưới</button>
+          <a class="btn" href="#rsvp">✉️ Xác nhận</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gate -->
+  <div class="gate" id="gate">
+    <div class="card gate-card">
+      <div class="kicker center">
+        <span class="pill"></span>
+        <span>Mời Cưới</span>
+      </div>
+
+      <h2>THIỆP</h2>
+      <p class="muted">— NHẤP VÀO THIỆP ĐỂ MỞ —</p>
+
+      <div class="who">
+        Trân Trọng Kính Mời: <span id="guestName">Quý Khách</span>
+      </div>
+
+      <div class="gate-actions">
+        <button class="btn primary" id="btnOpen">✨ Mở thiệp</button>
+        <a class="btn" href="#events" id="btnQuick">Xem nhanh</a>
+      </div>
+
+      <p class="hint">
+        Tip: gửi link kiểu <code>?to=Nguyen%20Van%20A</code> để hiện tên khách.
+      </p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="container" id="top">
+    <div class="hero">
+      <div class="card hero-left reveal">
+        <div class="kicker"><span class="pill"></span> Thư Mời Cưới</div>
+
+        <h1 id="heroNames">Nguyễn Ngọc Ánh<br>&amp; Đỗ Viết Long</h1>
+
+        <p class="sub" id="heroInviteText">
+          Trân trọng kính mời Quý Khách đến dự Tiệc mừng và Lễ Thành Hôn của chúng tôi.
+        </p>
+
+        <div class="meta">
+          <div class="chip">📍 <span id="heroPlace">Tư gia nhà gái</span></div>
+          <div class="chip">🗺️ <span id="heroAddr">Thôn Guồng, Lập Thạch, Phú Thọ</span></div>
+        </div>
+
+        <div class="countdown" id="countdown">
+          <div class="timebox"><strong id="d">00</strong><span>Ngày</span></div>
+          <div class="timebox"><strong id="h">00</strong><span>Giờ</span></div>
+          <div class="timebox"><strong id="m">00</strong><span>Phút</span></div>
+          <div class="timebox"><strong id="s">00</strong><span>Giây</span></div>
+        </div>
+
+        <div class="hero-links">
+          <a class="btn primary" href="#letter">📩 Thư mời</a>
+          <a class="btn" href="#events">📅 Lịch trình</a>
+          <a class="btn" href="#map">🧭 Chỉ đường</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card photo reveal">
+          <img class="photo-img" id="heroImg" src="./assets/hero.jpg" alt="Ảnh cưới" loading="eager">
+          <div class="overlay"></div>
+          <div class="caption">
+            <div class="names" id="heroMonogram">NA ✦ VL</div>
+            <div class="date" id="heroDateTag">02 • 2026</div>
+          </div>
+        </div>
+
+        <div class="card mini reveal">
+          <h3>🎶 Nhạc nền</h3>
+          <p class="muted">Nhấn nút “Nhạc” trên thanh trên để bật/tắt.</p>
+          <div class="audioline">
+            <div class="volwrap">
+              <span>Âm lượng</span>
+              <input class="vol" id="vol" type="range" min="0" max="1" step="0.01" value="0.6">
+            </div>
+            <span class="tiny">(mp3)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LETTER + FAMILY -->
+  <section class="container" id="letter">
+    <div class="section-title">
+      <h2 class="reveal">Thư Mời</h2>
+      <p class="reveal">Thông tin gia đình hai bên</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card panel reveal">
+        <h3 class="h3">Nhà Gái</h3>
+        <div class="kv full">
+          <b>Địa chỉ</b>
+          <div id="brideAddr">Thôn Guồng, Lập Thạch, Phú Thọ</div>
+        </div>
+        <div class="row">
+          <div class="kv">
+            <b>Ông</b>
+            <div id="brideDad">ÔNG NGUYỄN XUÂN TỚI</div>
+          </div>
+          <div class="kv">
+            <b>Bà</b>
+            <div id="brideMom">BÀ NGUYỄN THỊ THUÂN</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card panel reveal">
+        <h3 class="h3">Nhà Trai</h3>
+        <div class="kv full">
+          <b>Địa chỉ</b>
+          <div id="groomAddr">TDP Tam Hợp, Tự Lạn, Bắc Ninh</div>
+        </div>
+        <div class="row">
+          <div class="kv">
+            <b>Ông</b>
+            <div id="groomDad">ÔNG ĐỖ VIẾT ĐÔNG</div>
+          </div>
+          <div class="kv">
+            <b>Bà</b>
+            <div id="groomMom">BÀ NGUYỄN THỊ THÊM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card panel reveal" style="margin-top:14px;">
+      <h3 class="h3">Trân Trọng Báo Tin Lễ Vu Quy Của</h3>
+      <div class="bigcenter" id="coupleLine">Nguyễn Ngọc Ánh &amp; Đỗ Viết Long</div>
+      <div class="muted centerline" id="lunarLine">
+        (Tức Ngày 20 Tháng 12 Năm Ất Tỵ) — Tại Tư Gia Nhà Gái
+      </div>
+      <div class="muted centerline" id="monthLine">Tháng 02 • 2026</div>
+    </div>
+  </section>
+
+  <!-- EVENTS + CALENDAR -->
+  <section class="container" id="events">
+    <div class="section-title">
+      <h2 class="reveal">Lịch Trình</h2>
+      <p class="reveal">Tiệc mừng & Lễ thành hôn</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card panel reveal">
+        <h3 class="h3">TIỆC MỪNG LỄ THÀNH HÔN</h3>
+        <div class="row">
+          <div class="kv">
+            <b>Ngày</b>
+            <div id="partyDate">06.02.2026</div>
+          </div>
+          <div class="kv">
+            <b>Giờ</b>
+            <div id="partyTime">16:00 — Thứ 6</div>
+          </div>
+          <div class="kv full">
+            <b>Âm lịch</b>
+            <div id="partyLunar">(Tức Ngày 19 Tháng 12 Năm Ất Tỵ)</div>
+          </div>
+          <div class="kv full">
+            <b>Địa điểm</b>
+            <div><span id="eventPlace1">Tại Tư Gia Nhà Gái</span><br><span class="muted" id="eventAddr1">Thôn Guồng, Lập Thạch, Phú Thọ</span></div>
+            <div class="inline-actions">
+              <a class="btn small" id="partyDirections" target="_blank" rel="noopener">🧭 Mở chỉ đường</a>
+              <button class="btn small" id="btnIcsParty">📅 Lưu lịch (.ics)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card panel reveal">
+        <h3 class="h3">LỄ THÀNH HÔN</h3>
+        <div class="row">
+          <div class="kv">
+            <b>Ngày</b>
+            <div id="weddingDate">07.02.2026</div>
+          </div>
+          <div class="kv">
+            <b>Giờ</b>
+            <div id="weddingTime">10:00 — Thứ Bảy</div>
+          </div>
+          <div class="kv full">
+            <b>Âm lịch</b>
+            <div id="weddingLunar">(Tức Ngày 20 Tháng 12 Năm Ất Tỵ)</div>
+          </div>
+          <div class="kv full">
+            <b>Địa điểm</b>
+            <div><span id="eventPlace2">Tại Tư Gia Nhà Gái</span><br><span class="muted" id="eventAddr2">Thôn Guồng, Lập Thạch, Phú Thọ</span></div>
+            <div class="inline-actions">
+              <a class="btn small" id="weddingDirections" target="_blank" rel="noopener">🧭 Mở chỉ đường</a>
+              <button class="btn small" id="btnIcsWedding">📅 Lưu lịch (.ics)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card panel reveal" style="margin-top:14px;">
+      <div class="section-title" style="margin:0 0 10px;">
+        <h2 style="font-size:22px;margin:0;font-family:Fraunces;">THÁNG 2 • 2026</h2>
+        <p class="muted" style="margin:0;">Tô nổi bật ngày 06 & 07</p>
+      </div>
+      <div id="calendar"></div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="container" id="map">
+    <div class="section-title">
+      <h2 class="reveal">Địa Điểm Tổ Chức</h2>
+      <p class="reveal">Nhúng Google Map</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card panel reveal">
+        <div class="kv full">
+          <b>Địa chỉ</b>
+          <div id="mapAddrText">Thôn Guồng, Lập Thạch, Phú Thọ — TƯ GIA NHÀ GÁI</div>
+        </div>
+        <p class="hint">
+          Bạn lấy iframe từ Google Maps: Chia sẻ → Nhúng bản đồ, rồi dán src vào config.js (map.embedSrc).
+        </p>
+      </div>
+
+      <div class="card panel reveal">
+        <div class="mapframe">
+          <iframe id="mapIframe"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP + WISHES -->
+  <section class="container" id="rsvp">
+    <div class="section-title">
+      <h2 class="reveal">Xác Nhận Tham Dự &amp; Gửi Lời Chúc</h2>
+      <p class="reveal">RSVP + Lời chúc </p>
+    </div>
+
+    <div class="grid2">
+      <div class="card panel reveal">
+        <form id="rsvpForm">
+          <div class="formrow">
+            <div>
+              <label>Tên của bạn là?</label>
+              <input name="name" required placeholder="VD: Nguyễn Văn A">
+            </div>
+            <div>
+              <label>Bạn là gì của Dâu Rể nhỉ?</label>
+              <input name="rel" placeholder="Bạn bè / Đồng nghiệp / Họ hàng...">
+            </div>
+          </div>
+
+          <div class="formrow">
+            <div>
+              <label>Bạn có tham dự không?</label>
+              <select name="attend" required>
+                <option value="Có">Có</option>
+                <option value="Chưa chắc">Chưa chắc</option>
+                <option value="Không">Không</option>
+              </select>
+            </div>
+            <div>
+              <label>Số người tham dự</label>
+              <select name="guests">
+                <option>1</option><option>2</option><option>3</option><option>4+</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn primary" type="submit">Gửi xác nhận</button>
+          <div class="toast" id="rsvpToast">✅ Đã ghi nhận! Cảm ơn bạn.</div>
+        </form>
+      </div>
+
+      <div class="card panel reveal">
+        <form id="wishForm">
+          <div class="formrow">
+            <div>
+              <label>Tên của bạn là?</label>
+              <input id="wishName" required placeholder="Tên của bạn">
+            </div>
+            <div>
+              <label>Bạn là gì của Dâu Rể nhỉ?</label>
+              <input id="wishRel" placeholder="Bạn bè / Đồng nghiệp...">
+            </div>
+          </div>
+
+          <div>
+            <label>Gửi lời chúc đến Dâu Rể nhé!</label>
+            <textarea id="wishText" required placeholder="Chúc mừng hạnh phúc..."></textarea>
+          </div>
+
+          <button class="btn" type="submit">Gửi lời chúc</button>
+          <div class="toast" id="wishToast">✅ Đã thêm lời chúc!</div>
+        </form>
+
+        <div class="wishlist" id="wishList"></div>
+        <p class="muted centerline" style="margin-top:14px;">Rất hân hạnh được đón tiếp!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALBUM -->
+  <section class="container" id="album">
+    <div class="section-title">
+      <h2 class="reveal">Album hình cưới</h2>
+      <p class="reveal">Click để xem phóng to</p>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="muted">Made with ♥ Cuong Acoustic</p>
+    </div>
+  </footer>
+
+  <!-- Gift modal -->
+  <div class="modal" id="giftModal" aria-hidden="true">
+    <div class="box">
+      <div class="head">
+        <b>🎁 Mừng cưới</b>
+        <button class="x" id="giftClose">✕</button>
+      </div>
+      <div class="body">
+        <div class="gift-grid">
+          <div class="bank">
+            <h4>Chuy?n kho?n</h4>
+            <div class="muted" id="giftBank">Ng?n h?ng: ...</div>
+            <div class="muted" id="giftOwner">Ch? TK: ...</div>
+            <div class="muted" id="giftBranch">Chi nh?nh: ...</div>
+            <code id="giftNumber">S? TK: ...</code>
+            <button class="btn small" id="giftCopy" data-copy="">?? Copy STK</button>
+          </div>
+          <div class="qr">
+            <img id="giftQr" alt="QR chuy?n kho?n">
+          </div>
+              <div class="muted">Thay bằng ảnh QR của bạn</div>
+              <div class="muted">Ví dụ: assets/qr.png</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image modal -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <div class="box">
+      <div class="head">
+        <b>🖼️ Ảnh</b>
+        <button class="x" id="imgClose">✕</button>
+      </div>
+      <div class="body">
+        <img id="imgView" alt="Ảnh phóng to" style="width:100%;height:auto;border-radius:16px;border:1px solid rgba(255,255,255,.12);">
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgm" src="./assets/song.mp3" preload="auto" loop></audio>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
