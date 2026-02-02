@@ -26,10 +26,7 @@ window.INVITE = {
   location: {
     placeName: "TƯ GIA NHÀ GÁI",
     addressLine: "Thôn Guồng, Lập Thạch, Phú Thọ",
-    // Nút chỉ đường (Google Maps search query)
     directionsUrl: "https://www.google.com/maps/search/?api=1&query=21.4036389%2C105.4833889",
-    // ✅ Dán src iframe từ Google Maps (Share → Embed a map)
-    // Ví dụ sẽ có dạng: https://www.google.com/maps/embed?pb=...
     embedSrc: "https://www.google.com/maps?q=21.4036389,105.4833889&output=embed",
   },
 
